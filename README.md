@@ -23,7 +23,7 @@ npm run dev
 | `KAKAO_REST_API_KEY` | Kakao Local 검색 및 Mobility Directions API | 서버 전용 |
 | `NEXT_PUBLIC_KAKAO_JS_KEY` | Kakao 지도 JavaScript SDK | 브라우저에 공개됨; 허용 도메인 제한 필수 |
 
-`DATA_GO_KR_API_KEY`에는 공공데이터포털에서 발급된 디코딩 키를 입력합니다. 날씨는 Open-Meteo를 사용하므로 별도 키가 필요하지 않습니다. `.env.example`에는 실제 인증값을 넣지 마세요. `NEXT_PUBLIC_` 변수는 브라우저 번들에 포함되므로 비밀키로 취급하지 말고 Kakao Developers에서 허용 도메인을 제한하세요.
+`DATA_GO_KR_API_KEY`에는 공공데이터포털에서 발급된 디코딩 키를 입력합니다. 날씨는 Open-Meteo를 사용하므로 별도 키가 필요하지 않습니다. `.env.example`에는 실제 인증값을 넣지 마세요. `NEXT_PUBLIC_` 변수는 브라우저 번들에 포함되므로 비밀키로 취급하지 말고 Kakao Developers에서 허용 도메인을 제한하세요. Vercel에서는 `NEXT_PUBLIC_KAKAO_JS_KEY`를 **Config** 유형으로, 배포할 환경(Production 등)에 설정하고 새 빌드를 실행해야 반영됩니다. 서버 전용 키는 Secret으로 유지하세요.
 
 ## GitHub에 업로드
 
